@@ -2,7 +2,7 @@ export type PersonalData = {
   name: string;
   lastName: string;
   birth: string;
-  gender: "male" | "female" | "other" | "nonmentioned";
+  gender: string;
   email: string;
 };
 
