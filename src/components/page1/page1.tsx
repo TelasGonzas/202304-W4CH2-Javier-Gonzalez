@@ -1,6 +1,11 @@
 import { SyntheticEvent } from "react";
 import { Personal } from "../../models/personal.model";
+import { Menu } from "../menu/menu";
+import { MenuOptions } from "../../types/menu.options";
 
+type PropsType = {
+  options: MenuOptions;
+};
 export default function AddPersonalData() {
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
@@ -14,6 +19,8 @@ export default function AddPersonalData() {
     );
     console.log(personalDataInput);
   };
+
+  const options: MenuOptions = [{ url: "Page2", label: "Enviar" }];
 
   return (
     <main>
@@ -63,7 +70,10 @@ export default function AddPersonalData() {
           <input type="checkbox"></input>Desea recibir información de nuestra
           newsletter?
         </label>
-        <button type="submit">Añadir</button>
+
+        <button type="submit">
+          <Menu options={options}></Menu>
+        </button>
       </form>
     </main>
   );
