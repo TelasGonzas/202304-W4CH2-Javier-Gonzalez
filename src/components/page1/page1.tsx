@@ -43,7 +43,10 @@ export function AddPersonalData() {
           <label htmlFor="email">Email</label>
           <input type="email" name="email" id="email" required />
         </div>
-
+        <label>
+          <input type="checkbox"></input>Desea recibir información de nuestra
+          newsletter?
+        </label>
         <button type="submit">Añadir</button>
       </form>
     </main>
