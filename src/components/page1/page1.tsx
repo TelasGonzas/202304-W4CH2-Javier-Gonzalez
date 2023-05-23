@@ -36,7 +36,6 @@ export default function AddPersonalData() {
         </div>
         <div>
           <label htmlFor="gender">Gender</label>
-          <legend>Select a gender:</legend>
           <div>
             <input type="radio" id="male" name="gender" value="male" />
             <label htmlFor="male">Male</label>
