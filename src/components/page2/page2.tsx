@@ -1,5 +1,7 @@
 import { SyntheticEvent } from "react";
 import { Access } from "../../models/access.model";
+import { Menu } from "../menu/menu";
+import { MenuOptions } from "../../types/menu.options";
 
 export default function AddAccessData() {
   const handleSubmit = (event: SyntheticEvent) => {
@@ -12,6 +14,9 @@ export default function AddAccessData() {
     );
     console.log(personalDataInput);
   };
+
+  const options: MenuOptions = [{ url: "Page1", label: "Atrás" }];
+
   return (
     <form aria-label="form" onSubmit={handleSubmit}>
       <div>
@@ -36,6 +41,9 @@ export default function AddAccessData() {
           <option value="business">Business</option>
         </select>
       </div>
+      <button>
+        <Menu options={options}></Menu>
+      </button>
       <button type="submit">Next</button>
     </form>
   );

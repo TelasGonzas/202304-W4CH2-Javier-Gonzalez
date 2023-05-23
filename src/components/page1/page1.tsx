@@ -3,9 +3,6 @@ import { Personal } from "../../models/personal.model";
 import { Menu } from "../menu/menu";
 import { MenuOptions } from "../../types/menu.options";
 
-type PropsType = {
-  options: MenuOptions;
-};
 export default function AddPersonalData() {
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
