@@ -1,7 +1,7 @@
 import { SyntheticEvent } from "react";
-import { Personal } from "../../models/Model";
+import { Personal } from "../../models/personal.model";
 
-export function AddPersonalData() {
+export default function AddPersonalData() {
   const handleSubmit = (event: SyntheticEvent) => {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
@@ -32,12 +32,28 @@ export function AddPersonalData() {
         </div>
         <div>
           <label htmlFor="gender">Gender</label>
-          <select name="gender" id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
-            <option value="prefer not to mention">Prefer not to mention</option>
-          </select>
+          <legend>Select a gender:</legend>
+          <div>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label htmlFor="male">Male</label>
+          </div>
+          <div>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label htmlFor="female">Female</label>
+          </div>
+          <div>
+            <input type="radio" id="other" name="gender" value="other" />
+            <label htmlFor="other">Other</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              id="nonmentioned"
+              name="gender"
+              value="nonmentioned"
+            />
+            <label htmlFor="nonmentioned">Prefer not to mention</label>
+          </div>
         </div>
         <div>
           <label htmlFor="email">Email</label>
